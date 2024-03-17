@@ -1,0 +1,55 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Raleway", sans-serif;
+  /* w ten sposób robimy sobie ładnie Gradientowe tło , możemy użyć :
+     Gradient radialny prosty: W tym przypadku gradient radialny tworzy okrągły gradient z koloru 
+     Gradient radialny eliptyczny: Ten gradient jest podobny do gradientu prostego, ale ma kształt elipsy zamiast okręgu
+     Specyfikacja położenia środka gradientu: Możesz określić konkretne położenie środka gradientu, tutaj np 30% od lewej i 50% od góry. 
+     Gradient radialny z określonym rozmiarem: Ten gradient ma określone rozmiary, 100 pikseli na 100 pikseli, i położenie środka w połowie szerokości i wysokości elementu.
+     Gradienty z kolorami i przystawkami (color stops): Możesz określić różne kolory i procenty, aby kontrolować, jak gradient zmienia się na przestrzeni jego promienia.
+
+     Powielanie gradientów: repeating-radial-gradient pozwala na powtarzanie gradientów w określonych odstępach, w tym przypadku co 20 pikseli.*/
+  background: radial-gradient(circle, rgb(151, 150, 150) 10%, rgb(244, 243, 243) 65%);
+}
+
+.card {
+  width: 400px;
+  border-radius: 8px;
+  background-color: white;
+  overflow: hidden;
+  margin: 50px;
+}
+.card__img {
+  width: 100%;
+}
+.card__body {
+  padding: 20px 40px;
+}
+.card__text {
+  margin: 20px 0px;
+}
+.card__btns {
+  display: flex;
+  justify-content: space-around;
+}
+.card__btn {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding: 10px 10px;
+  cursor: pointer;
+}
+.card--highlight:hover {
+  background-color: rgba(5, 255, 34, 0.799);
+  transition: 0.5s;
+}/*# sourceMappingURL=style.css.map */

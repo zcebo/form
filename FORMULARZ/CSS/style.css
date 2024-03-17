@@ -1,0 +1,73 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  font-family: "Raleway", sans-serif;
+  /* w ten sposób robimy sobie ładnie Gradientowe tło , możemy użyć :
+     Gradient radialny prosty: W tym przypadku gradient radialny tworzy okrągły gradient z koloru 
+     Gradient radialny eliptyczny: Ten gradient jest podobny do gradientu prostego, ale ma kształt elipsy zamiast okręgu
+     Specyfikacja położenia środka gradientu: Możesz określić konkretne położenie środka gradientu, tutaj np 30% od lewej i 50% od góry. 
+     Gradient radialny z określonym rozmiarem: Ten gradient ma określone rozmiary, 100 pikseli na 100 pikseli, i położenie środka w połowie szerokości i wysokości elementu.
+     Gradienty z kolorami i przystawkami (color stops): Możesz określić różne kolory i procenty, aby kontrolować, jak gradient zmienia się na przestrzeni jego promienia.
+
+     Powielanie gradientów: repeating-radial-gradient pozwala na powtarzanie gradientów w określonych odstępach, w tym przypadku co 20 pikseli.*/
+  background: radial-gradient(circle, rgb(255, 255, 255) 10%, rgb(255, 255, 255) 65%);
+  overflow: hidden;
+}
+
+.form {
+  position: relative;
+  border: 1px solid rgb(165, 164, 164);
+  padding: 10px;
+  border-radius: 5px;
+  width: 300px;
+  height: 500px;
+}
+.form__tittle {
+  font-size: 25px;
+  font-weight: 800;
+  margin: 30px 70px;
+  margin-bottom: 100px;
+  color: rgb(189, 188, 188);
+}
+.form__box {
+  position: relative;
+  margin-top: -40px;
+  width: 100%;
+  height: 150px;
+}
+.form label {
+  position: absolute;
+  margin-top: -30px;
+  left: 10px;
+  color: rgb(138, 136, 136);
+}
+.form input {
+  position: absolute;
+  width: 90%;
+  height: 30px;
+  right: 20px;
+  border-radius: 5px;
+  border: 2px solid rgb(189, 189, 189);
+}
+.form__city {
+  position: absolute;
+  margin-top: 80px;
+  width: 100%;
+  height: 150px;
+}
+.form__tel {
+  position: absolute;
+  margin-top: 160px;
+  width: 100%;
+  height: 150px;
+}/*# sourceMappingURL=style.css.map */

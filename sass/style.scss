@@ -1,0 +1,69 @@
+// SASS POZWALA NAM ZAPISYWAĆ KODY WEWNĄTRZ SIEBIE , TZN GDY MAMY RODZICA I CHCEMY W NIM EDYTOWAĆ DZIECI ,TO NIE MUSZE TAK JAK W CSS WYCHODZIĆ Z KODOWANIA PIERWSZEGO BY IŚĆ DO DRUGIEGO . W TYM MOGE SOBIE TO PO PROOSTU ZROBIĆ NA RAZ.
+
+
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	font-family: 'Montserrat', sans-serif;
+	font-family: 'Raleway', sans-serif;
+	/* w ten sposób robimy sobie ładnie Gradientowe tło , możemy użyć :
+    Gradient radialny prosty: W tym przypadku gradient radialny tworzy okrągły gradient z koloru 
+    Gradient radialny eliptyczny: Ten gradient jest podobny do gradientu prostego, ale ma kształt elipsy zamiast okręgu
+    Specyfikacja położenia środka gradientu: Możesz określić konkretne położenie środka gradientu, tutaj np 30% od lewej i 50% od góry. 
+    Gradient radialny z określonym rozmiarem: Ten gradient ma określone rozmiary, 100 pikseli na 100 pikseli, i położenie środka w połowie szerokości i wysokości elementu.
+    Gradienty z kolorami i przystawkami (color stops): Możesz określić różne kolory i procenty, aby kontrolować, jak gradient zmienia się na przestrzeni jego promienia.
+    
+    Powielanie gradientów: repeating-radial-gradient pozwala na powtarzanie gradientów w określonych odstępach, w tym przypadku co 20 pikseli.*/
+	background: radial-gradient(circle, rgb(151, 150, 150) 10%, rgb(244, 243, 243) 65%);
+}
+
+.card {
+	width: 400px;
+	border-radius: 8px;
+	background-color: white;
+	// wylaczam opcje wyciekania za strone , czyliu dostosowuje sie do calosci nmoejej edytowanej karty. nie musze edytowac osobno img
+	overflow: hidden;
+	// dodałem margin aby karty były obok siebie
+	margin: 50px;
+	// dodalem w 100% bo zdjecie jest w naszej CARD , a nasza card ma 400 px , wiec zdjecie osiagnie taki sam rozmiar. Tak mozna zapisywać za pomoca & - tylko pamietajmy ze tylko i wylacznie dziecko danego Kontenera , a ze zdjecie jest w naszej CARD , no to moglem sonbie na to pozwolić
+	&__img {
+		width: 100%;
+	}
+
+	// zrobilem odstep w naszym body  cczyli nasz text
+	&__body {
+		padding: 20px 40px;
+	}
+	&__text {
+		margin: 20px 0px;
+	}
+
+	// wystarczy dać flex , oraz space-around bo chce te przyciski oddalić od siebie
+	&__btns {
+		display: flex;
+		justify-content: space-around;
+	}
+	// teraz styluje ogolnie dwa przyciski
+
+	&__btn {
+		border: 1px solid black;
+		border-radius: 8px;
+		padding: 10px 10px;
+		cursor: pointer;
+	}
+
+	// musiałem dodać ten kod wewnatrz naszej karty CARD - wtedy zadziala
+	&--highlight:hover {
+		background-color: rgba(5, 255, 34, 0.799);
+		transition: 0.5s;
+	}
+}
